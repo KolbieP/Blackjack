@@ -4,7 +4,7 @@ let cards = []
 let hasBlackJack = false
 let isAlive = false
 let player = {
-    name: "Per",
+    name: "Player 1",
     chips: 200
 }
 
@@ -12,9 +12,7 @@ let messageEl = document.getElementById("message-el")
 //This uses querySelector 
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
-//let personEl = document.getElementById("player-el")
-
-//personEl.textContent = player.name + ": $" + player.chips
+let personEl = document.getElementById("player-el")
 
 function startGame() {
     let firstCard = getRandomCard()
@@ -45,6 +43,7 @@ function renderGame() {
 
     sumEl.textContent = "Sum: " + sum
     messageEl.innerText = message
+    personEl.textContent = player.name + ": $" + player.chips
 }
 
 function newCard() {
